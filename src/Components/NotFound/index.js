@@ -4,7 +4,7 @@ import Link from "@mui/material/Link";
 
 const index = () => {
   return (
-    <Link onClick={window.scrollTo(0, 0)} to={"/"}>
+    <Link href={"/"}>
       <Box
         sx={{
           margin: "auto",
