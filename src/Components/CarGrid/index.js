@@ -2,7 +2,7 @@ import { Grid, Typography, Button } from '@mui/material'
 import CarCard from '../CarCard'
 import React from 'react'
 
-const index = ({ name, button, cars }) => {
+const CarGrid = ({ name, button, cars }) => {
     return (
         <Grid container width={"90%"} margin={"auto"} mt={"20px"} justifyContent={"space-between"} sx={{ justifyContent: { xs: "center", sm: "space-between" } }}>
             {button ? <Grid container xs={12} alignContent={"center"} justifyContent={"space-between"}>
@@ -23,4 +23,4 @@ const index = ({ name, button, cars }) => {
     )
 }
 
-export default index
+export default CarGrid
