@@ -6,7 +6,7 @@ import Dropoff from './Dropoff'
 
 const PickupCard = () => {
   return (
-    <Grid container width={"98%"} xs={12} margin={"auto"} justifyContent={"space-around"} alignItems={"center"} flexGrow={1}>
+    <Grid container width={"95%"} xs={12} margin={"auto"} justifyContent={"space-around"} alignItems={"center"} flexGrow={1}>
       <Grid item xl={5.5} xs={12} >
         <Pickup />
       </Grid>
@@ -16,8 +16,6 @@ const PickupCard = () => {
       <Grid item  xl={5.5} xs={12}>
         <Dropoff />
       </Grid>
-
-
     </Grid>
   )
 }

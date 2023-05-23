@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { Box, Typography, CardMedia, Grid } from '@mui/material';
+import { Typography, CardMedia, Grid } from '@mui/material';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -16,8 +16,7 @@ const MenuProps = {
         },
     },
 };
-
-const names = [
+const cityNames = [
     'Jerusalem',
     'Ramallah',
     'Qalqilyah',
@@ -30,8 +29,6 @@ const names = [
     'Bethlehem',
     'Hebron'
 ];
-
-
 function getStyles(name, personName, theme) {
     return {
         fontWeight:
@@ -40,7 +37,6 @@ function getStyles(name, personName, theme) {
                 : theme.typography.fontWeightMedium,
     };
 }
-
 export default function Dropoff() {
     const theme = useTheme();
     const [personName, setPersonName] = React.useState([]);
@@ -54,7 +50,6 @@ export default function Dropoff() {
             typeof value === 'string' ? value.split(',') : value,
         );
     };
-
     return (
         <Grid margin={"auto"} marginY={"50px"} padding={"20px"} borderRadius={"12px"} sx={{ backgroundColor: "white", width: "fit-content", height:{xs:"300px", sm:"fit-content"} }}>
             <Grid container alignItems={"center"} justifyContent={"space-around"} xs={4} sm={2.5} md={2} lg={1.8}>
@@ -65,7 +60,6 @@ export default function Dropoff() {
                 />
                 <Typography>Drop - Off</Typography>
             </Grid>
-           
             <FormControl sx={{ m: 1, width:{xs:100, sm:150, md:200}, mt: 3 }}>
             <Typography>Locations</Typography>
                 <Select
@@ -78,7 +72,6 @@ export default function Dropoff() {
                             return <Typography variant='secondary'>Select your city</Typography>
                                 ;
                         }
-
                         return selected.join(', ');
                     }}
                     MenuProps={MenuProps}
@@ -87,7 +80,7 @@ export default function Dropoff() {
                     <MenuItem value="">
                         <em>Select a city</em>
                     </MenuItem>
-                    {names.map((name) => (
+                    {cityNames.map((name) => (
                         <MenuItem
                             key={name}
                             value={name}
@@ -119,7 +112,7 @@ export default function Dropoff() {
                     <MenuItem value="">
                         <em>Select a date</em>
                     </MenuItem>
-                    {names.map((name) => (
+                    {cityNames.map((name) => (
                         <MenuItem
                             key={name}
                             value={name}
@@ -130,7 +123,6 @@ export default function Dropoff() {
                     ))}
                 </Select>
             </FormControl>
-
             <FormControl sx={{ m: 1, width:{xs:100, sm:150, md:200}, mt: 3 }}>
             <Typography>Time</Typography>
                 <Select
@@ -152,7 +144,7 @@ export default function Dropoff() {
                     <MenuItem value="">
                         <em>Select a time</em>
                     </MenuItem>
-                    {names.map((name) => (
+                    {cityNames.map((name) => (
                         <MenuItem
                             key={name}
                             value={name}
