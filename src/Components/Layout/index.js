@@ -2,7 +2,6 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from '../Header'
 import Footer from '../Footer'
-import Ads from '../Ads'
 import { Box } from '@mui/material'
 import {  createTheme, ThemeProvider } from '@mui/material'
 
@@ -37,7 +36,6 @@ function Layout() {
     <ThemeProvider theme={theme}>
       <Box sx={{backgroundColor:"#F6F7F9"}}>
         <Header />
-        <Ads />
         <Outlet />
         <Footer />
       </Box>
