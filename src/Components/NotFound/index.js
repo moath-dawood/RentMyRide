@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 
-const index = () => {
+const NotFound = () => {
   return (
     <Link href={"/"}>
       <Box
@@ -24,4 +24,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default NotFound;

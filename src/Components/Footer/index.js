@@ -1,4 +1,4 @@
-import { Typography, useTheme, Grid, Divider } from '@mui/material'
+import { Typography, useTheme, Grid } from '@mui/material'
 import RentMyRide from '../RentMyRide'
 import React from 'react'
 
