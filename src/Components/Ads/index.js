@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography, Grid, Box, Button } from '@mui/material';
 
-const index = () => {
+const Ads = () => {
     return (
         <Grid width={"95%"} margin={"auto"} marginY={"30px"} justifyContent={"space-between"} container sx={12}>
             <Grid item xs={12} md={5.5}>
@@ -42,4 +42,4 @@ const index = () => {
 
 
 
-export default index
+export default Ads
