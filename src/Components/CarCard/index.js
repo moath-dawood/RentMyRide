@@ -1,3 +1,4 @@
+import React from 'react'
 import { Box, Grid, Typography, Button, Link } from '@mui/material'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -5,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import GroupIcon from '@mui/icons-material/Group';
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
-import React from 'react'
+
 
 const CarCard = ({ name = "name", type = "type", image, capacity = 50, gear = "Manual", passengers = 2, price = "$99.00", discountedPrice, liked = false }) => {
   return (
