@@ -11,6 +11,7 @@ function Router() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="*" element={<NotFound />} />
+          <Route path='/carPage/:id'/>
         </Route>
       </Routes>
     </BrowserRouter>
