@@ -1,10 +1,9 @@
-import { Typography, useTheme, Grid } from '@mui/material'
+import { Typography, Grid } from '@mui/material'
 import RentMyRide from '../RentMyRide'
 import React from 'react'
 
 
 const Footer = () => {
-  const theme = useTheme()
   return (
     <Grid sx={{ padding: "30px", margin: "auto", backgroundColor: { md: "white", xs: "#F6F7F9" } }} container>
       <Grid sx={{ paddingTop: "50px", paddingBottom: "30px", marginBottom: "30px", borderBottom: "1px solid", borderColor: "rgba(13,13,13,0.16)" }} container xs={12}>
