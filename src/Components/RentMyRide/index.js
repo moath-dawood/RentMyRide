@@ -6,7 +6,7 @@ const Title = styled('div')(({}) => ({
   display: { xs: "block", sm: "block" },
   width: { xs: "100%", sm: "fit-content" },
   color: "#3563E9",
-  marginRight: "50px"
+  marginRight: "30px"
 }));
 
 const RentMyRide = () => {
