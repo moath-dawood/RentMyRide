@@ -11,7 +11,7 @@ function Router() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path='/Payment/:id' element={ <PaymentPage /> }/>
+          <Route path='/payment-page/:carId' element={ <PaymentPage /> }/>
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
