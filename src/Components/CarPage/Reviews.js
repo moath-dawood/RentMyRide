@@ -1,10 +1,10 @@
 import React from 'react'
 import { Grid, Typography, Rating, Avatar, Stack } from '@mui/material'
 
-const Reviews = ({review}) => {
+const Reviews = ({ review }) => {
   return (
     <Grid mb={"20px"} container sx={{ backgroundColor: "white", height: "fit-content" }}>
-      <Grid container xs={0.5} justifyContent={"center"}>
+      <Grid container xs={0.4} mr={"10px"} justifyContent={"center"}>
         <Avatar src={`${review.image}`} />
       </Grid>
       <Grid container xs={11.5}>
