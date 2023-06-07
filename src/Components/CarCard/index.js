@@ -8,7 +8,7 @@ import GroupIcon from '@mui/icons-material/Group';
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
 
 
-const CarCard = ({ name = "name", type = "type", image, capacity = 50, gear = "Manual", passengers = 2, price = "$99.00", discountedPrice, liked = false }) => {
+const CarCard = ({ id, name, type, image, capacity, gear, passengers, price, discountedPrice, liked }) => {
   return (
     <Box sx={{ backgroundColor: "white", borderRadius: "10px", width: { xs: "350px", sm: "250px" }, height: "310px", padding: "15px", marginBottom: "20px" }}>
       <Grid container>
@@ -65,7 +65,7 @@ const CarCard = ({ name = "name", type = "type", image, capacity = 50, gear = "M
           </Grid>
           }
           <Grid xs={4} sm={5.5}>
-            <Link href={`/productPage/${name}`}> <Button sx={{ boxShadow: "0" }} variant='contained'>Rent Now</Button> </Link>
+            <Link href={`/car-page/:${id}`}> <Button sx={{ boxShadow: "0" }} variant='contained'>Rent Now</Button> </Link>
           </Grid>
         </Grid>
       </Grid>
