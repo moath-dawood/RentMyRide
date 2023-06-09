@@ -2,9 +2,9 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 
-const index = () => {
+const NotFound = () => {
   return (
-    <Link onClick={window.scrollTo(0, 0)} to={"/"}>
+    <Link href={"/"}>
       <Box
         sx={{
           margin: "auto",
@@ -24,4 +24,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default NotFound;

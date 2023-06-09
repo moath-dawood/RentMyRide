@@ -18,7 +18,7 @@ import { Grid } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
-  borderRadius: "20px", border: "1px groove",borderColor:"rgb(200,200,200)",
+  borderRadius: "20px", border: "1px groove", borderColor: "rgb(200,200,200)",
   '&:hover': {
     backgroundColor: "rgb(230, 230, 230)",
   },
@@ -56,7 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function PrimarySearchAppBar() {
+export default function Header() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -83,86 +83,84 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Grid container>
-    <Box sx={{flexGrow: 1}}>
-      <AppBar color={"inherit"} position="static"  sx={{border:"1px groove",boxShadow:0,minHeight:"80px"}}>
-        <Toolbar sx={{paddingTop:"7px", display:"flex"}}>
-        <Grid item xs={12} md={1.2}>
-        <RentMyRide />
-         </Grid>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon color='disabled' />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search something here"
-              inputProps={{ 'aria-label': 'search' }}
-              sx={{borderRadius: {xs:'10px', md:'20px'}}}
-            />
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-              sx={{width:"40px", height:"40px", marginRight:"10px"}}
-            >
-              <TuneRoundedIcon sx={{}} color='disabled'/> 
-            </IconButton>
-          </Search>
-          <Box justifyContent={"flex-end"} sx={{ flexGrow: 1 }} />
-          <Grid item sx={12}>
-          <Box sx={{ display: { xs: '100%', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit" sx={{border:"1px groove", width:"40px", height:"40px"}}>
-              <Badge badgeContent={19} color="error" >
-                <FavoriteIcon color={"disabled"} backgroundColor={"primary"}/>
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-              sx={{border:"1px groove", width:"40px", height:"40px", marginLeft:"10px"}}
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon color={"disabled"}/>
-              </Badge>
-            </IconButton>
-            <IconButton 
-            sx={{border:"1px groove", width:"40px", height:"40px", marginLeft:"10px"}}
-              size="large"
-              aria-label="show 17 new notifications"
-            >
-                <SettingsIcon color={"disabled"}/>
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-              sx={{border:"1px groove", width:"40px", height:"40px", marginLeft:"10px"}}
-            >
-              <AccountCircle />
-            </IconButton>
-          </Box></Grid>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
-    </Box>
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar color={"inherit"} position="static" sx={{ border: "1px groove", boxShadow: 0, minHeight: "80px" }}>
+          <Toolbar sx={{ paddingTop: "7px", display: "flex" }}>
+            <RentMyRide />
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon color='disabled' />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search something here"
+                inputProps={{ 'aria-label': 'search' }}
+                sx={{ borderRadius: { xs: '10px', md: '20px' } }}
+              />
+              <IconButton
+                size="large"
+                aria-label="show more"
+                aria-controls={mobileMenuId}
+                aria-haspopup="true"
+                onClick={handleMobileMenuOpen}
+                color="inherit"
+                sx={{ width: "40px", height: "40px", marginRight: "10px" }}
+              >
+                <TuneRoundedIcon sx={{}} color='disabled' />
+              </IconButton>
+            </Search>
+            <Box justifyContent={"flex-end"} sx={{ flexGrow: 1 }} />
+            <Grid item sx={12}>
+              <Box sx={{ display: { xs: '100%', md: 'flex' } }}>
+                <IconButton size="large" aria-label="show 4 new mails" color="inherit" sx={{ border: "1px groove", width: "40px", height: "40px" }}>
+                  <Badge badgeContent={19} color="error" >
+                    <FavoriteIcon color={"disabled"} backgroundColor={"primary"} />
+                  </Badge>
+                </IconButton>
+                <IconButton
+                  size="large"
+                  aria-label="show 17 new notifications"
+                  color="inherit"
+                  sx={{ border: "1px groove", width: "40px", height: "40px", marginLeft: "10px" }}
+                >
+                  <Badge badgeContent={17} color="error">
+                    <NotificationsIcon color={"disabled"} />
+                  </Badge>
+                </IconButton>
+                <IconButton
+                  sx={{ border: "1px groove", width: "40px", height: "40px", marginLeft: "10px" }}
+                  size="large"
+                  aria-label="show 17 new notifications"
+                >
+                  <SettingsIcon color={"disabled"} />
+                </IconButton>
+                <IconButton
+                  size="large"
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-controls={menuId}
+                  aria-haspopup="true"
+                  onClick={handleProfileMenuOpen}
+                  color="inherit"
+                  sx={{ border: "1px groove", width: "40px", height: "40px", marginLeft: "10px" }}
+                >
+                  <AccountCircle />
+                </IconButton>
+              </Box></Grid>
+            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+              <IconButton
+                size="large"
+                aria-label="show more"
+                aria-controls={mobileMenuId}
+                aria-haspopup="true"
+                onClick={handleMobileMenuOpen}
+                color="inherit"
+              >
+                <MoreIcon />
+              </IconButton>
+            </Box>
+          </Toolbar>
+        </AppBar>
+      </Box>
     </Grid>
   );
 }
