@@ -5,8 +5,11 @@ import RentalInfo from './RentalInfo'
 import PaymentMethod from './PaymentMethod'
 import Confirmation from './Confirmation'
 import RentalSummary from './RentalSummary'
+import { useParams } from 'react-router-dom'
 
 const PaymentPage = () => {
+const {id} = useParams()
+console.log(id);
     return (
         <Grid container justifyContent={"space-between"} padding={"20px"}>
             <Grid container xs={12} md={7.9} order={{ md: 1, xs: 2}}>

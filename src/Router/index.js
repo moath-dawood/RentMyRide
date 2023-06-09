@@ -14,7 +14,7 @@ function Router() {
           <Route index element={<HomePage />} />
           <Route path='/payment-page/:carId' element={ <PaymentPage /> }/>
           <Route path="*" element={<NotFound />} />
-          <Route path='/carPage/:id'/>
+          <Route path='/carPage/:carid'/>
         </Route>
         <Route path="/login" element={<LoginPage />}/>
       </Routes>

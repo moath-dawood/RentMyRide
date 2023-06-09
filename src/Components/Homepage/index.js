@@ -1,12 +1,16 @@
 import React from 'react'
+import Ads from '../Ads'
+import PickupCard from '../PickupCard'
 import CarsMain from '../CarsMain'
 
 
 export const HomePage = () => {
   return (
-    <div>
+    <main>
+      <Ads />
+      <PickupCard />
       <CarsMain />
-    </div>
+    </main>
   )
 }
 export default HomePage
