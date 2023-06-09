@@ -1,10 +1,11 @@
 import React from 'react'
-import PickupCard from '../PickupCard'
+import CarsMain from '../CarsMain'
+
 
 export const HomePage = () => {
   return (
     <div>
-      <PickupCard />
+      <CarsMain />
     </div>
   )
 }
