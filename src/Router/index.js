@@ -4,6 +4,7 @@ import Layout from "../Components/Layout";
 import NotFound from "../Components/NotFound"
 import HomePage from "../Components/Homepage";
 import PaymentPage from '../Components/PaymentPage'
+import LoginPage from "../Components/LoginPage";
 
 function Router() {
   return (
@@ -14,6 +15,7 @@ function Router() {
           <Route path='/payment-page/:carId' element={ <PaymentPage /> }/>
           <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="/login" element={<LoginPage />}/>
       </Routes>
     </BrowserRouter>
   );
