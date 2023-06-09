@@ -40,7 +40,7 @@ const LoginPage = () => {
 
     return (
         <Grid container height={"100vh"} xs={12} sx={{ background: "#F6F7F9" }}>
-            <Grid container p={"15px"} m={"auto"} xs={9} sm={6} md={4} borderRadius={"10px"} sx={{ backgroundColor: "white" }} >
+            <Grid container p={"15px"} m={"auto"} xs={11} sm={6} md={4} borderRadius={"10px"} sx={{ backgroundColor: "white" }} >
                 <Grid container mb={"20px"} xs={12} justifyContent={"center"}>
                     <RentMyRide />
                 </Grid>
