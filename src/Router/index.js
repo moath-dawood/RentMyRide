@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../Components/Layout";
 import NotFound from "../Components/NotFound"
 import HomePage from "../Components/Homepage";
-import CarPage from "../Components/CarPage";
+import PaymentPage from '../Components/PaymentPage'
+import LoginPage from "../Components/LoginPage";
 
 function Router() {
   return (
@@ -11,9 +12,11 @@ function Router() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path='/car-page/:carId' element={ <CarPage /> }/>
+          <Route path='/payment-page/:carId' element={ <PaymentPage /> }/>
           <Route path="*" element={<NotFound />} />
+          <Route path='/carPage/:carid'/>
         </Route>
+        <Route path="/login" element={<LoginPage />}/>
       </Routes>
     </BrowserRouter>
   );
