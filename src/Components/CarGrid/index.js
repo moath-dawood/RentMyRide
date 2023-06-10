@@ -27,7 +27,7 @@ const CarGrid =  ({ name, button, cars }) => {
                         <Grid container xs={12} sx={{ justifyContent: { xs: "center", sm: "space-between" } }}>
                             {cars.map(item => (
                                 <Grid container justifyContent={"center"} xs={12} sm={6} md={4} lg={3}>
-                                    <CarCard  name={item.name} type={item.type} image={item.image} capacity={item.capacity} gear={item.gear} passengers={item.passengers} price={item.price} discountedPrice={item.discountedPrice} liked={item.liked} />
+                                    <CarCard id={item.id} name={item.name} type={item.type} image={item.image} capacity={item.capacity} gear={item.gear} passengers={item.passengers} price={item.price} discountedPrice={item.discountedPrice} liked={item.liked} />
                                 </Grid>
                             ))}
                         </Grid>

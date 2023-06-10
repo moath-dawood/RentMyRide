@@ -2,12 +2,12 @@ import React from 'react'
 import { CardMedia, Grid, Typography, Rating, Button, InputAdornment, Box, FormControl, InputLabel, OutlinedInput } from '@mui/material'
 
 
-const CarInfo = ({car}) => {
+const CarInfo = ({ car }) => {
     return (
         <Grid container justifyContent={"space-around"}>
             <Grid container xs={12} pb={"30px"} sx={{ borderBottom: "1px solid", borderColor: "rgba(13,13,13,0.16)" }}>
-                <Grid xs={4} mr={"10px"} container borderRadius={"10px"} justifyContent={"center"} alignItems={"center"} sx={{ width: "150px", height: "100px", backgroundColor: "#3563E9" }}>
-                    <CardMedia sx={{ width: "116px", height: "36px", objectFit: "contain" }} component="img" image={`../assets/${car.image}.png`} />
+                <Grid xs={4} mr={"10px"} container borderRadius={"10px"} justifyContent={"center"} alignItems={"center"} sx={{ backgroundColor: "#3563E9" }}>
+                    <CardMedia sx={{ objectFit: "cover" }} component="img" image={car.image} />
                 </Grid>
                 <Grid container xs={7} flexDirection={"column"}>
                     <Typography variant='main' fontSize={"22px"} fontWeight={600}>{car.name}</Typography>
@@ -20,7 +20,7 @@ const CarInfo = ({car}) => {
             <Grid container sx={12}>
                 <Grid alignItems={"center"} justifyContent={"space-between"} container mt={"20px"}>
                     <Typography variant='secondary'>Subtotal</Typography>
-                    <Typography fontSize={"25px"} variant='main' fontWeight={600}>${car.price}</Typography>
+                    <Typography fontSize={"25px"} variant='main' fontWeight={600}>${car.price}.00</Typography>
                 </Grid>
                 <Grid alignItems={"center"} justifyContent={"space-between"} container>
                     <Typography variant='secondary'>Tax</Typography>
@@ -50,7 +50,7 @@ const CarInfo = ({car}) => {
                         <Typography variant='secondary' fontSize={"14px"}> Overall price rental</Typography>
                     </Grid>
                     <Grid container justifyContent={"flex-end"} xs={6}>
-                        <Typography variant='main' fontWeight={600} fontSize={"25px"}>${car.price}</Typography>
+                        <Typography variant='main' fontWeight={600} fontSize={"25px"}>${car.price}.00</Typography>
                     </Grid>
                 </Grid>
             </Grid>

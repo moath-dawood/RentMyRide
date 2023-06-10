@@ -22,11 +22,6 @@ const PopularCars1 = [
 ];
 const firebaseDomain = "https://rentmyride-0-default-rtdb.europe-west1.firebasedatabase.app"
 
-
-
-
-
-
 export const CarsMain = () => {
     useEffect(() => {
         getAllCars();
@@ -37,19 +32,35 @@ export const CarsMain = () => {
     const [transformedCars, setTransformedCars] = useState([]);
     const getAllCars = async () => {
         const PopularCars = await (await fetch(`${firebaseDomain}/Cars/PopularCars.json`)).json()
-        setTransformedCars(PopularCars)
+        const retrievedCars = []
+        for (const key in PopularCars) {
+            const retrievedCar = {
+                ...PopularCars[key],
+                id: key
+            };
+            retrievedCars.push(retrievedCar)
+        }
+        setTransformedCars(retrievedCars)
     }
     const handleShowMore = () => {
         setNumberOfCars(prevNumberOfCars => prevNumberOfCars + 4);
     };
     const getRecommendedCars = async () => {
         const RecommendedCars = await (await fetch(`${firebaseDomain}/Cars/RecommendedCars.json`)).json()
-        setTransformedRecommendedCars(RecommendedCars)
+        const retrievedCars = []
+        for (const key in RecommendedCars) {
+            const retrievedCar = {
+                ...RecommendedCars[key],
+                id: key
+            };
+            retrievedCars.push(retrievedCar)
+        }
+        setTransformedRecommendedCars(retrievedCars)
     }
     return (
         <Box component={"section"}>
             <Grid container mb={"50px"}>
-            <CarGrid name="Recommended Cars" button={"View All"} cars={transformedRecommendedCars} />
+                <CarGrid name="Recommended Cars" button={"View All"} cars={transformedRecommendedCars} />
                 <CarGrid name="Popular Cars" cars={transformedCars.slice(0, numberOfCars)} />
                 <Grid container spacing={2} my={"30px"} width={"95%"} alignItems="center">
                     <Grid item xs={6.94} container justifyContent="flex-end">
