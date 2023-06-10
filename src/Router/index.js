@@ -6,6 +6,7 @@ import HomePage from "../Components/Homepage";
 import PaymentPage from '../Components/PaymentPage'
 import LoginPage from "../Components/LoginPage";
 import CarPage from "../Components/CarPage";
+import CarSearch from "../Components/CarSearch";
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
           <Route index element={<HomePage />} />
           <Route path='/payment-page/:carId' element={ <PaymentPage /> }/>
           <Route path='/car-page/:carId' element={<CarPage />}/>
+          <Route path='/car-search' element={<CarSearch/>}/>
           <Route path="*" element={<NotFound />} />
         </Route>
         <Route path="/login" element={<LoginPage />}/>

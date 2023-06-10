@@ -14,7 +14,7 @@ import TuneRoundedIcon from '@mui/icons-material/TuneRounded';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import SettingsIcon from '@mui/icons-material/Settings';
 import RentMyRide from '../RentMyRide';
-import { Grid } from '@mui/material';
+import { Grid, Link } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -96,6 +96,7 @@ export default function Header() {
                 inputProps={{ 'aria-label': 'search' }}
                 sx={{ borderRadius: { xs: '10px', md: '20px' } }}
               />
+              <Link href={`/car-search`}>
               <IconButton
                 size="large"
                 aria-label="show more"
@@ -107,6 +108,7 @@ export default function Header() {
               >
                 <TuneRoundedIcon sx={{}} color='disabled' />
               </IconButton>
+              </Link>
             </Search>
             <Box justifyContent={"flex-end"} sx={{ flexGrow: 1 }} />
             <Grid item sx={12}>
