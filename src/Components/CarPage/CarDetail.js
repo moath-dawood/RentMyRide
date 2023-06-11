@@ -1,25 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Grid, Typography, Rating, Link, Button } from '@mui/material'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import IconButton from '@mui/material/IconButton';
 
-const CarDetail = ({ car }) => {
+const CarDetail = ({ car, rating }) => {
+    const [Liked, setLiked] = useState(false);
+    const handleLiked = () => {
+        setLiked(!Liked)
+    }
     return (
 
         <Grid container xs={12} borderRadius={"10px"} sx={{ backgroundColor: "white", height: "100%" }}>
             <Grid margin={"20px"} container alignItems={"center"} height={"fit-content"} justifyContent={"space-between"} xs={12}>
                 <Typography variant='main' fontSize={"25px"} pb={"5px"} children fontWeight={"600"}>{car.name}</Typography>
-                {car.liked ? <IconButton>
+                {Liked ? <IconButton onClick={handleLiked}>
                     <FavoriteIcon sx={{ color: "red" }} />
                 </IconButton>
                     :
                     <IconButton>
-                        <FavoriteBorderIcon />
+                        <FavoriteBorderIcon onClick={handleLiked} />
                     </IconButton>
                 }
                 <Grid container alignItems={"center"} height={"fit-content"} xs={12}>
-                    <Rating defaultValue={car.rating} value={car.rating} precision={0.5} readOnly sx={{ mr: "5px" }} />
+                    <Rating defaultValue={rating} precision={0.5} readOnly sx={{ mr: "5px" }} />
                     <Typography variant='secondary' children fontWeight={"600"}>{car.reviews}+ Reviewer</Typography>
                 </Grid>
             </Grid>

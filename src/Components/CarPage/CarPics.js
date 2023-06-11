@@ -6,9 +6,9 @@ const CarPics = ({ car }) => {
     const [selected, setSelected] = useState(car.image)
     const [mainPic, setMainPic] = useState(true)
     return (
-        <Grid container xs={12} height="fit-content" sx={{ mb: { xs: "15px", md: "0px" } }} p={"15px"}>
+        <Grid container xs={12} height="100%" sx={{ mb: { xs: "15px", md: "0px" } }} p={"15px"}>
             <Grid item xs={12} sx={{ mb: { xs: "15px", md: "20px" } }}>
-                <CarMainPic title={car.title} info={car.info} image={selected} mainPic={mainPic} />
+                <CarMainPic title={car.title} info={car.info} image={selected} mainPic={mainPic} car={car} />
             </Grid>
             <Grid container mt={"10px"} justifyContent={"space-between"} xs={12}>
                 <Grid item xs={3}>
@@ -17,10 +17,10 @@ const CarPics = ({ car }) => {
                     </Grid>
                 </Grid>
                 <Grid item xs={3}>
-                    <CardMedia onClick={() => { setSelected(car.image2); setMainPic(false) }} sx={{ width:"100%", height:"100%" ,objectFit: "cover", borderRadius: "15px" }} component="img" image={car.image2} />
+                    <CardMedia onClick={() => { setSelected(car.image2); setMainPic(false) }} sx={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "15px" }} component="img" image={car.image2} />
                 </Grid>
                 <Grid item xs={3}>
-                    <CardMedia onClick={() => { setSelected(car.image3); setMainPic(false) }} sx={{ width:"100%", height:"100%" ,objectFit: "cover", borderRadius: "15px" }} component="img" image={car.image3} />
+                    <CardMedia onClick={() => { setSelected(car.image3); setMainPic(false) }} sx={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "15px" }} component="img" image={car.image3} />
                 </Grid>
             </Grid>
         </Grid>

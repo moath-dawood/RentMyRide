@@ -1,0 +1,1 @@
+export const FB_URL = "https://rentmyride-0-default-rtdb.europe-west1.firebasedatabase.app/"

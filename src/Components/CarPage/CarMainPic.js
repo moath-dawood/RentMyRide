@@ -1,8 +1,7 @@
 import React from 'react'
 import { Grid, Box, Typography, CardMedia } from '@mui/material'
 
-const CarMainPic = ({ title, info, image, mainPic }) => {
-    console.log(image)
+const CarMainPic = ({ title, info, image, mainPic, car}) => {
     return (
         <Grid container xs={12}>
             {mainPic ?
@@ -15,7 +14,7 @@ const CarMainPic = ({ title, info, image, mainPic }) => {
                             <Typography variant='secondary' sx={{ fontSize: { xs: "15px", md: "17px", xl: "25px" } }} color={"white"}>{info}</Typography>
                         </Grid>
                         <Grid container xs={12} justifyContent={"center"}>
-                            <CardMedia sx={{ width: "fit-content", height: "150px", objectFit: "contain" }} component="img" image={image} />
+                            <CardMedia sx={{ width: "fit-content", height: "150px", objectFit: "contain" }} component="img" image={car.image} />
                         </Grid>
                     </Grid>
                 </Box>
