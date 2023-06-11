@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button, Grid, Typography, Box } from '@mui/material'
 import CarGrid from '../CarGrid';
-import { useEffect } from 'react';
+import { FB_URL } from '../../API/Firebase';
 
-const firebaseDomain = "https://rentmyride-0-default-rtdb.europe-west1.firebasedatabase.app"
 export const CarsMain = () => {
     useEffect(() => {
         getAllCars();
@@ -13,7 +12,7 @@ export const CarsMain = () => {
     const [transformedRecommendedCars, setTransformedRecommendedCars] = useState([]);
     const [transformedCars, setTransformedCars] = useState([]);
     const getAllCars = async () => {
-        const PopularCars = await (await fetch(`${firebaseDomain}/Cars/PopularCars.json`)).json()
+        const PopularCars = await (await fetch(`${FB_URL}/Cars/PopularCars.json`)).json()
         const retrievedCars = []
         for (const key in PopularCars) {
             const retrievedCar = {
@@ -28,7 +27,7 @@ export const CarsMain = () => {
         setNumberOfCars(prevNumberOfCars => prevNumberOfCars + 4);
     };
     const getRecommendedCars = async () => {
-        const RecommendedCars = await (await fetch(`${firebaseDomain}/Cars/RecommendedCars.json`)).json()
+        const RecommendedCars = await (await fetch(`${FB_URL}/Cars/RecommendedCars.json`)).json()
         const retrievedCars = []
         for (const key in RecommendedCars) {
             const retrievedCar = {

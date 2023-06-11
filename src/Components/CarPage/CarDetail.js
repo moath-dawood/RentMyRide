@@ -9,8 +9,8 @@ const CarDetail = ({ car, rating }) => {
     const handleLiked = () => {
         setLiked(!Liked)
     }
-    return (
 
+    return (
         <Grid container xs={12} borderRadius={"10px"} sx={{ backgroundColor: "white", height: "100%" }}>
             <Grid margin={"20px"} container alignItems={"center"} height={"fit-content"} justifyContent={"space-between"} xs={12}>
                 <Typography variant='main' fontSize={"25px"} pb={"5px"} children fontWeight={"600"}>{car.name}</Typography>
@@ -23,8 +23,8 @@ const CarDetail = ({ car, rating }) => {
                     </IconButton>
                 }
                 <Grid container alignItems={"center"} height={"fit-content"} xs={12}>
-                    <Rating defaultValue={rating} precision={0.5} readOnly sx={{ mr: "5px" }} />
-                    <Typography variant='secondary' children fontWeight={"600"}>{car.reviews}+ Reviewer</Typography>
+                    <Rating value={car.rating} precision={0.5} readOnly sx={{ mr: "5px" }} />
+                    <Typography variant='secondary' children fontWeight={"600"}>{car.reviews}+Reviewer</Typography>
                 </Grid>
             </Grid>
             <Grid margin={"20px"} container xs={12}>
@@ -37,7 +37,7 @@ const CarDetail = ({ car, rating }) => {
                 </Grid>
                 <Grid container xs={12} sm={6}>
                     <Typography variant='secondary' fontSize={"15px"} children fontWeight={"600"} sx={{ mr: { xs: "20px", md: "40px" } }}>Capacity</Typography>
-                    <Typography variant='main' fontSize={"15px"} children fontWeight={"600"}>{car.passengers} Person</Typography>
+                    <Typography variant='main' fontSize={"15px"} children fontWeight={"600"}>{car.passengers}</Typography>
                 </Grid>
                 <Grid container xs={12} sm={6}>
                     <Typography variant='secondary' fontSize={"15px"} children fontWeight={"600"} sx={{ mr: { xs: "40px", md: "60px" } }}>Gear</Typography>

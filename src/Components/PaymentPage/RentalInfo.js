@@ -5,7 +5,7 @@ import Location from './Location';
 
 const RentalInfo = () => {
   return (
-    <Grid xs={12} padding={"15px"} mt={"30px"} sx={{ backgroundColor: "white" }} borderRadius={"10px"}>
+    <Grid container xs={12} padding={"15px"} mt={"30px"} sx={{ backgroundColor: "white" }} borderRadius={"10px"}>
       <Title Title={"Rental Info"} Info={"Please select your rental date"} Step={2} />
       <Grid container alignItems={"center"} flexDirection={"row"}>
         <CardMedia sx={{ width: "13px", height: "13px", marginRight: "10px" }} component="img" image={"../assets/Pickup.png"} />

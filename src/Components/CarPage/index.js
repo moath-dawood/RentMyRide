@@ -8,42 +8,43 @@ import { FB_URL } from '../../API/Firebase';
 import useHttp from '../../hooks/useHttp';
 
 const CarPage = () => {
-  const [retrievedCars, setRetrievedCars] = useState([]);
+  const [filteredCar, setFilteredCars] = useState([]);
   const [retrievedReviews, setRetrievedReviews] = useState([]);
   const { carId } = useParams()
-
   //const { isLoading, error, sendRequest, data } = useHttp();
-
   //const handleData = (data) => {
-    //return data;
+  //return data;
   //}
   useEffect(() => {
     //const getData = () => {
-      //const response = sendRequest({
-        //url: `${FB_URL}/Cars/PopularCars/${carId.slice(1)}`
-      //}, handleData);
-      //setTransformedCars(response)
+    //const response = sendRequest({
+    //url: `${FB_URL}/Cars/PopularCars/${carId.slice(1)}`
+    //}, handleData);
+    //setTransformedCars(response)
     //}
-    const getCars = async () => {
-      const response = await fetch(`${FB_URL}/Cars/PopularCars/${carId.slice(1)}.json`)
-      const car = await response.json()
-      setRetrievedCars(car)
-      }
+    const getCar = async () => {
+      const allCars = await (await fetch(`${FB_URL}/Cars/PopularCars/${carId.slice(1)}.json`)).json()
+      const retrievedCar = {
+        ...allCars,
+        id: carId
+      };
+      setFilteredCars(retrievedCar)
+    }
     const getReviews = async () => {
-    const response = await fetch(`${FB_URL}/Cars/Reviews/${carId.slice(1)}/Reviews.json`)
-    const car = await response.json()
-    setRetrievedReviews(car)
+      const response = await fetch(`${FB_URL}/Cars/Reviews/${carId.slice(1)}/Reviews.json`)
+      const car = await response.json()
+      setRetrievedReviews(car)
     }
     getReviews();
-    getCars()
+    getCar();
   }, []);
   return (
     <Grid justifyContent={"space-between"} mt={"10px"} container xs={12}>
       <Grid container justifyContent={"center"} sm={12} md={5.5}>
-        <CarPics car={retrievedCars} />
+        <CarPics car={filteredCar} />
       </Grid>
       <Grid container justifyContent={"center"} p={"20px"} sm={12} md={5.5}>
-        <CarDetail car={retrievedCars} rating={retrievedCars.rating} />
+        <CarDetail car={filteredCar} rating={filteredCar.rating} />
       </Grid>
       <Grid item xs={12} p={"20px"}>
         <ReviewsContainer reviews={retrievedReviews} />

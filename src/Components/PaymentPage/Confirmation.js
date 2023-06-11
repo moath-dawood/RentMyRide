@@ -5,14 +5,14 @@ import Checkbox from '@mui/material/Checkbox';
 
 const Confirmation = () => {
   return (
-    <Grid xs={12} padding={"15px"} mt={"30px"} sx={{ backgroundColor: "white" }} borderRadius={"10px"}>
+    <Grid item xs={12} padding={"15px"} mt={"30px"} sx={{ backgroundColor: "white" }} borderRadius={"10px"}>
       <Title Title={"Confirmation"} Info={"We are getting to the end. Just few clicks and your rental is ready!"} Step={4} />
-      <Grid alignItems={"center"} mt={"25px"} height={"55px"} padding={"35px"} paddingY={"7px"} sx={{ backgroundColor: "#F6F7F9" }} borderRadius={"10px"}>
+      <Grid container alignItems={"center"} mt={"25px"} height={"55px"} padding={"35px"} paddingY={"7px"} sx={{ backgroundColor: "#F6F7F9" }} borderRadius={"10px"}>
         <FormGroup>
           <FormControlLabel control={<Checkbox defaultChecked />} label="I agree with sending an Marketing and newsletter emails. No spam, promised!" />
         </FormGroup>
       </Grid>
-      <Grid alignItems={"center"} mt={"25px"} height={"55px"} padding={"35px"} paddingY={"7px"} sx={{ backgroundColor: "#F6F7F9" }} borderRadius={"10px"}>
+      <Grid container alignItems={"center"} mt={"25px"} height={"55px"} padding={"35px"} paddingY={"7px"} sx={{ backgroundColor: "#F6F7F9" }} borderRadius={"10px"}>
         <FormGroup>
           <FormControlLabel control={<Checkbox defaultChecked />} label="I agree with our terms and conditions and privacy policy." />
         </FormGroup>

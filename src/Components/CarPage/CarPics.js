@@ -5,6 +5,7 @@ import CarMainPic from './CarMainPic'
 const CarPics = ({ car }) => {
     const [selected, setSelected] = useState(car.image)
     const [mainPic, setMainPic] = useState(true)
+
     return (
         <Grid container xs={12} height="100%" sx={{ mb: { xs: "15px", md: "0px" } }} p={"15px"}>
             <Grid item xs={12} sx={{ mb: { xs: "15px", md: "20px" } }}>

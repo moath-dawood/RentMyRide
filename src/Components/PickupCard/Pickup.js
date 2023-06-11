@@ -56,7 +56,7 @@ export default function Pickup() {
     };
 
     return (
-        <Grid margin={"auto"} padding={"20px"} borderRadius={"12px"} sx={{ backgroundColor: "white", width: "100%", height:"fit-content" }}>
+        <Grid item margin={"auto"} padding={"20px"} borderRadius={"12px"} sx={{ backgroundColor: "white", width: "100%", height:"fit-content" }}>
             <Grid container alignItems={"center"} xs={12}>
                 <CardMedia
                     sx={{ width: "13px", height: "13px", mr:"10px" }}
