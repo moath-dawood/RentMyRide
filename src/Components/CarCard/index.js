@@ -14,7 +14,7 @@ const CarCard = ({ id, name, type, image, capacity, gear, passengers, price, dis
     setLiked(!Liked)
   }
   return (
-    <Box sx={{ backgroundColor: "white", borderRadius: "10px", width: { xs: "350px", sm: "250px" }, height: "fit-content", padding: "15px", marginBottom: "20px" }}>
+    <Box sx={{ backgroundColor: "white", borderRadius: "10px", width: { xs: "350px", sm: "250px" }, height: "350px", padding: "15px", marginBottom: "20px" }}>
       <Grid container>
         <Grid container alignItems={"center"} justifyContent={"space-between"} xs={12}>
           <Typography variant='main' fontSize={"20px"} children fontWeight={"600"}>{name}</Typography>
