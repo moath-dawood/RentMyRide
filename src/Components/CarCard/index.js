@@ -37,7 +37,7 @@ const CarCard = ({ id, name, type, image, capacity, gear, passengers, price, dis
               width: "100%",
               height: "90px",
               backgroundImage: `url('${image}')`,
-              backgroundSize: "70% 100%",
+              backgroundSize: "70% 110%",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
