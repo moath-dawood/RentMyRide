@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from '@mui/material'
+import { Typography, Link } from '@mui/material'
 import { styled } from '@mui/material/styles';
 
 const Title = styled('div')(() => ({
@@ -11,7 +11,8 @@ const Title = styled('div')(() => ({
 
 const RentMyRide = () => {
   return (
-    <Title>   
+    <Title>  
+      <Link href={"/"} sx={{textDecoration:"none"}}>
        <Typography
       variant="h5"
       noWrap
@@ -20,6 +21,7 @@ const RentMyRide = () => {
     >
       RentMyRide
     </Typography>
+    </Link> 
     </Title>
 
   );

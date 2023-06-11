@@ -7,19 +7,19 @@ import Dropoff from './Dropoff'
 const PickupCard = () => {
   return (
     <Box component="section">
-      <Grid container width={"95%"} xs={12} margin={"auto"} justifyContent={"space-around"} alignItems={"center"} flexGrow={1}>
-        <Grid item xl={5.5} xs={12} >
+      <Grid container width={"90%"} xs={12} margin={"auto"} my={"50px"} justifyContent={"space-around"} alignItems={"center"} flexGrow={1}>
+        <Grid item md={5} xs={12} >
           <Pickup />
         </Grid>
-        <Grid justifyContent={"center"} margin={"auto"}>
+        <Grid container xs={12} md={2} justifyContent={"center"} sx={{ zIndex:2,m:{xs:"-20px", md:"0px"}}}>
           <Switcher />
         </Grid>
-        <Grid item xl={5.5} xs={12}>
+        <Grid item md={5} xs={12}>
           <Dropoff />
         </Grid>
       </Grid>
     </Box>
   )
 }
-
+//fix this card
 export default PickupCard

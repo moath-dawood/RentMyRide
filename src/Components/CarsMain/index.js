@@ -4,7 +4,6 @@ import CarGrid from '../CarGrid';
 import { useEffect } from 'react';
 
 const firebaseDomain = "https://rentmyride-0-default-rtdb.europe-west1.firebasedatabase.app"
-
 export const CarsMain = () => {
     useEffect(() => {
         getAllCars();
@@ -43,8 +42,8 @@ export const CarsMain = () => {
     return (
         <Box component={"section"}>
             <Grid container mb={"50px"}>
-                <CarGrid name="Recommended Cars" button={"View All"} cars={transformedRecommendedCars} />
-                <CarGrid name="Popular Cars" cars={transformedCars.slice(0, numberOfCars)} />
+                <CarGrid name="Popular Cars" button={"View All"} lg={3} cars={transformedRecommendedCars} />
+                <CarGrid name="Recommended Cars" lg={3} cars={transformedCars.slice(0, numberOfCars)} />
                 <Grid container spacing={2} my={"30px"} width={"95%"} alignItems="center">
                     <Grid item xs={6.94} container justifyContent="flex-end">
                         {numberOfCars < transformedCars.length &&
