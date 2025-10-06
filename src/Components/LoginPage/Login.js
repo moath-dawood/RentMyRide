@@ -21,14 +21,15 @@ export const Login = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
+        console.log(allUsers[1].email)
         for (let i = 0; i < allUsers.length; i++) {
             if (allUsers[i].email == userEmail && allUsers[i].password == userPassword) {
-                
+
                 window.location.href = "/"
             }
             
         }
-        toast.error("Enter Valid Login informations", { position: toast.POSITION.TOP_CENTER })
+        toast.error("Enter valid login information", { position: toast.POSITION.TOP_CENTER })
     }
     return (
         <Stack mt={"20px"} width={"100%"}>
@@ -36,11 +37,11 @@ export const Login = () => {
             <form onSubmit={handleLogin}>
                 <Box mt={"30px"} width={"100%"} sx={{ display: 'flex', alignItems: 'flex-end' }}>
                     <EmailTwoToneIcon fontSize='large' sx={{ color: 'action.active', mr: 1, my: 1.5 }} />
-                    <TextField value={userEmail} onChange={(e => setUserEmail(e.target.value))} fullWidth id="input-with-sx" label="Enter your E-mail" />
+                    <TextField value={userEmail} onChange={(e => setUserEmail(e.target.value))} fullWidth label="Enter your E-mail" />
                 </Box>
                 <Box mt={"20px"} width={"100%"} sx={{ display: 'flex', alignItems: 'flex-end' }}>
                     <LockTwoToneIcon fontSize='large' sx={{ color: 'action.active', mr: 1, my: 2 }} />
-                    <TextField value={userPassword} onChange={(e => setUserPassword(e.target.value))} fullWidth type='password' id="input-with-sx" label="Enter your password" />
+                    <TextField value={userPassword} onChange={(e => setUserPassword(e.target.value))} fullWidth type='password' label="Enter your password" />
                 </Box>
                 <Button sx={{ mt: "50px", paddingX: "30px", paddingY: "10px", borderRadius: "10px", textTransform: "capitalize", fontSize: "20px", fontFamily: "inherit", backgroundColor: "#3563e9" }} fullWidth type='submit' variant='contained'>Login Now</Button>
             </form>

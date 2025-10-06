@@ -34,15 +34,15 @@ export const Register = () => {
     <Stack mt={'20px'} width={'100%'}>
       <Box mt={'30px'} width={'100%'} sx={{ display: 'flex', alignItems: 'flex-end' }}>
         <EmailTwoToneIcon fontSize="large" sx={{ color: 'action.active', mr: 1, my: 1 }} />
-        <TextField fullWidth id="input-with-sx" label="Enter your E-mail" value={userEmail} onChange={e => setUserEmail(e.target.value)} />
+        <TextField fullWidth label="Enter your E-mail" value={userEmail} onChange={e => setUserEmail(e.target.value)} />
       </Box>
       <Box mt={'30px'} width={'100%'} sx={{ display: 'flex', alignItems: 'flex-end' }}>
         <LockTwoToneIcon fontSize="large" sx={{ color: 'action.active', mr: 1, my: 1.5 }} />
-        <TextField fullWidth id="input-with-sx" type="password" label="Create a password" value={userPassword} onChange={e => setUserPassword(e.target.value)} />
+        <TextField fullWidth type="password" label="Create a password" value={userPassword} onChange={e => setUserPassword(e.target.value)} />
       </Box>
       <Box mt={'20px'} width={'100%'} sx={{ display: 'flex', alignItems: 'flex-end' }}>
         <LockTwoToneIcon fontSize="large" sx={{ color: 'action.active', mr: 1, my: 2 }} />
-        <TextField fullWidth id="input-with-sx" type="password" label="Confirm the password" />
+        <TextField fullWidth  type="password" label="Confirm the password" />
       </Box>
       <IconButton
         color="primary"
