@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/RentMyRide/static/css/main.df176b78.css",
+    "main.js": "/RentMyRide/static/js/main.146d62f4.js",
+    "static/js/787.51c661c6.chunk.js": "/RentMyRide/static/js/787.51c661c6.chunk.js",
+    "index.html": "/RentMyRide/index.html",
+    "main.df176b78.css.map": "/RentMyRide/static/css/main.df176b78.css.map",
+    "main.146d62f4.js.map": "/RentMyRide/static/js/main.146d62f4.js.map",
+    "787.51c661c6.chunk.js.map": "/RentMyRide/static/js/787.51c661c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df176b78.css",
+    "static/js/main.146d62f4.js"
+  ]
+}
