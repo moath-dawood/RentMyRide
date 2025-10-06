@@ -10,11 +10,11 @@ const PaymentMethod = () => {
       <Grid container padding={"35px"} sx={{ backgroundColor: "#F6F7F9" }} borderRadius={"10px"}>
         <Grid container mb={"25px"} justifyContent={"space-between"}>
           <Grid container xs={6} mt={"0px"} alignItems={"center"} flexDirection={"row"}>
-            <CardMedia sx={{ width: "15px", height: "15px", marginRight: "10px" }} component="img" image={"../assets/Pickup.png"} />
+            <CardMedia sx={{ width: "15px", height: "15px", marginRight: "10px" }} component="img" image={`${process.env.PUBLIC_URL}/assets/pickup.png`} />
             <Typography variant='main' fontWeight={600}>Credit Card</Typography>
           </Grid>
           <Grid container xs={6} justifyContent={"flex-end"}>
-            <CardMedia sx={{ width: "92px", height: "20px", marginRight: "10px" }} component="img" image={"../assets/Visa.png"} />
+            <CardMedia sx={{ width: "92px", height: "20px", marginRight: "10px" }} component="img" image={`${process.env.PUBLIC_URL}/assets/visa.png`} />
           </Grid>
         </Grid>
         <Grid container justifyContent={"space-between"} sx={12}>
@@ -47,22 +47,22 @@ const PaymentMethod = () => {
       <Grid items mt={"25px"} height={"50px"} padding={"35px"} paddingY={"15px"} sx={{ backgroundColor: "#F6F7F9" }} borderRadius={"10px"}>
         <Grid container mb={"25px"} justifyContent={"space-between"}>
           <Grid container xs={6} mt={"0px"} alignItems={"center"} flexDirection={"row"}>
-            <CardMedia sx={{ width: "20px", height: "20px", marginRight: "10px" }} component="img" image={"../assets/circle.png"} />
+            <CardMedia sx={{ width: "20px", height: "20px", marginRight: "10px" }} component="img" image={`${process.env.PUBLIC_URL}/assets/Circle.png`} />
             <Typography variant='main' fontWeight={600}>PayPal</Typography>
           </Grid>
           <Grid container xs={6} justifyContent={"flex-end"}>
-            <CardMedia sx={{ width: "100px", height: "24px", marginRight: "10px" }} component="img" image={"../assets/PayPal.png"} />
+            <CardMedia sx={{ width: "100px", height: "24px", marginRight: "10px" }} component="img" image={`${process.env.PUBLIC_URL}/assets/Paypal.png`} />
           </Grid>
         </Grid>
       </Grid>
       <Grid item mt={"25px"} height={"50px"} padding={"35px"} paddingY={"15px"} sx={{ backgroundColor: "#F6F7F9" }} borderRadius={"10px"}>
         <Grid container mb={"25px"} justifyContent={"space-between"}>
           <Grid container xs={6} mt={"0px"} alignItems={"center"} flexDirection={"row"}>
-            <CardMedia sx={{ width: "20px", height: "20px", marginRight: "10px" }} component="img" image={"../assets/circle.png"} />
+            <CardMedia sx={{ width: "20px", height: "20px", marginRight: "10px" }} component="img" image={`${process.env.PUBLIC_URL}/assets/Circle.png`} />
             <Typography variant='main' fontWeight={600}>Bitcoin</Typography>
           </Grid>
           <Grid container xs={6} justifyContent={"flex-end"}>
-            <CardMedia sx={{ width: "94px", height: "20px", marginRight: "10px" }} component="img" image={"../assets/Bitcoin.png"} />
+            <CardMedia sx={{ width: "94px", height: "20px", marginRight: "10px" }} component="img" image={`${process.env.PUBLIC_URL}/assets/Bitcoin.png`} />
           </Grid>
         </Grid>
       </Grid>

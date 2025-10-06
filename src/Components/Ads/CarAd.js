@@ -14,7 +14,7 @@ const CarAd = ({title, info, image, backColor, buttonColor=null}) => {
                         <Button variant="contained" sx={{backgroundColor:buttonColor}}>Rental Car</Button>
                     </Grid> }  
                     <Grid container xs={12} justifyContent={"center"}>
-                        <img width={"250px"} src={`assets/${image}.png`} />
+                        <img width={"250px"} src={`${process.env.PUBLIC_URL}/assets/${image}.png`} />
                     </Grid>
                 </Box>
     )

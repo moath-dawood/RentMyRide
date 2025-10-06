@@ -18,7 +18,7 @@ const Confirmation = () => {
         </FormGroup>
       </Grid>
       <Button sx={{mt:"20px", paddingX:"30px", paddingY:"10px", borderRadius:"8px", textTransform:"capitalize"}} variant='contained'>Rent Now</Button>
-      <CardMedia sx={{ width: "32px", height: "32px", marginY: "30px" }} component="img" image={"../assets/secure.png"} />
+      <CardMedia sx={{ width: "32px", height: "32px", marginY: "30px" }} component="img" image={`${process.env.PUBLIC_URL}/assets/secure.png`} />
       <Title Title={"All your data are safe"} Info={"We are using the most advanced security to provide you the best experience ever."}/>
     </Grid>
   )

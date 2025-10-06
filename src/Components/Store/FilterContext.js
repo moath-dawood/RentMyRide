@@ -6,37 +6,34 @@ const FilterContext = createContext();
 export function FilterContextProvider(props) {
     const [filterValues, setFilterValues] = useState({
         type: [],
-        passengers: []
+        passengers: [],
+        price: 150
     });
 
-    const handleType = (name, value) => {
-        let types = [...filterValues.type]
-        if (value) {
-            if (types.indexOf(name)===-1)
-                types.push(name)
-        } else {
-            types = types.filter(item => item !== name)
-        }
-        setFilterValues({ ...filterValues, type: types })
-    }
+    const handleType = (name, checked) => {
+        setFilterValues(prev => ({
+            ...prev,
+            type: checked
+                ? [...prev.type, name]
+                : prev.type.filter(item => item !== name)
+        }));
+    };
 
-    const handlePassengers = (name, value) => {
-        let types = [...filterValues.passengers]
-        if (value) {
-            if (types.indexOf(name)===-1)
-                types.push(name)
-        } else {
-            types = types.filter(item => item !== name)
-        }
-        setFilterValues({ ...filterValues, passengers: types })
-    }
+    const handlePassengers = (name, checked) => {
+        setFilterValues(prev => ({
+            ...prev,
+            passengers: checked
+                ? [...prev.passengers, name]
+                : prev.passengers.filter(item => item !== name)
+        }));
+    };
+
+    const handlePrice = (value) => {
+        setFilterValues(prev => ({ ...prev, price: value }));
+    };
 
     return (
-        <FilterContext.Provider
-            value={{
-                handlePassengers, handleType, filterValues
-            }}
-        >
+        <FilterContext.Provider value={{ filterValues, handleType, handlePassengers, handlePrice }}>
             {props.children}
         </FilterContext.Provider>
     );

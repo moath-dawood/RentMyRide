@@ -1,4 +1,4 @@
-import { Grid, Typography, Button } from '@mui/material'
+import { Grid, Typography, Button, Link } from '@mui/material'
 import CarCard from '../CarCard'
 import React from 'react'
 
@@ -6,10 +6,10 @@ const CarGrid =  ({ name, button, cars, lg }) => {
         return  (
             <Grid container width={"90%"} margin={"auto"} xs={12} mt={"20px"} justifyContent={"space-between"} sx={{ justifyContent: { xs: "center", sm: "space-between" } }}>
                 {button ?
-                    <Grid container xs={12} justifyContent={"center"}>
+                    <Grid container xs={12} justifyContent={"center"} >
                         <Grid container xs={11} alignContent={"center"} justifyContent={"space-between"}>
-                            <Typography padding={"20px"} alignItems={"center"} variant='secondary'>{name}</Typography>
-                            <Button sx={{ textTransform: "capitalize", fontweight: 700, fontSize: "15px" }} > View All </Button>
+                            <Typography padding={"20px"} alignItems={"center"} variant='secondary'>- {name}</Typography>
+                            <Button sx={{ textTransform: "capitalize", fontweight: 700, fontSize: "15px" }} > <Link href={`/car-search`}>View All</Link></Button>
                         </Grid>
                         <Grid container xs={12} p={"10px"} flexWrap={"nowrap"} sx={{ justifyContent: "space-between", overflowX: "auto" }}>
                             {cars.map(item => (
@@ -20,9 +20,9 @@ const CarGrid =  ({ name, button, cars, lg }) => {
                         </Grid>
                     </Grid>
                     :
-                    <Grid>
-                        <Grid container xs={12} alignContent={"center"}>
-                            <Typography padding={"20px"} ml={"30px"} alignItems={"center"} variant='secondary'>{name}</Typography>
+                    <Grid container xs={12} justifyContent={"center"} >
+                        <Grid container xs={11} alignContent={"center"} justifyContent={"space-between"}>
+                            <Typography padding={"20px"} alignItems={"center"} variant='secondary'>- {name}</Typography>
                         </Grid>
                         <Grid container xs={12} sx={{ justifyContent: { xs: "center", sm: "space-between" } }}>
                             {cars.map(item => (
